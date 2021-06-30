@@ -1,14 +1,11 @@
 import { useState, useEffect  } from "react";
 
-export interface WindowDimensions {
-  height: number | undefined;
-  width: number | undefined;
-}
+import {Dimensions} from "../types/interfaces";
 
-const useWindowDimensions = (): WindowDimensions => {
-  const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
-    height: undefined,
-    width: undefined,
+const useWindowDimensions = (): Dimensions => {
+  const [windowDimensions, setWindowDimensions] = useState<Dimensions>({
+    height: 0,
+    width: 0,
   });
 
   useEffect(() => {
